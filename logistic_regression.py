@@ -87,7 +87,7 @@ if __name__ == "__main__":
                 w = w - list_lambda[i] * grad_loss(X_training, w, y_training, list_alpha[j])
                 loss[i,j,k-1] = eval_loss(X_validation, w, y_validation, list_alpha[j])
                 if k < num_epochs - 1:
-                    plt.plot(epochs[0:k], loss[i,j,0:k])
+                    plt.plot(epochs[0:k], loss[i,j,0:k], color='b')
                     plt.pause(0.002)
                 else:
                     plt.show()
